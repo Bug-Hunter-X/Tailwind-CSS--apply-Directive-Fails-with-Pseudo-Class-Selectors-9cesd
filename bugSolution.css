@@ -1,0 +1,21 @@
+To avoid this bug, avoid using `@apply` with pseudo-class selectors.  Instead, directly apply the styles using the utility classes within your component's CSS or by defining utility classes without using `@apply`.
+
+Example:
+```css
+/* bugSolution.css */
+.btn-primary {
+  /* Correct Way*/
+  background-color: blue;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: darkblue; 
+}
+```
+Alternatively, you can directly use Tailwind utility classes to apply styles and avoid this issue.
+
+```css
+.btn-primary {
+  bg-blue-500 text-white hover:bg-blue-700; 
+}
+```
